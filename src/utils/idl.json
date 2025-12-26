@@ -1,0 +1,61 @@
+{
+  "version": "0.1.0",
+  "name": "grokmultiverse",
+  "instructions": [
+    {
+      "name": "initializeAccount",
+      "accounts": [
+        { "name": "userStats", "isMut": true, "isSigner": false },
+        { "name": "user", "isMut": true, "isSigner": true },
+        { "name": "systemProgram", "isMut": false, "isSigner": false }
+      ],
+      "args": []
+    },
+    {
+      "name": "claimXPoints",
+      "accounts": [
+        { "name": "userStats", "isMut": true, "isSigner": false },
+        { "name": "user", "isMut": true, "isSigner": true }
+      ],
+      "args": []
+    },
+    {
+      "name": "claimTgPoints",
+      "accounts": [
+        { "name": "userStats", "isMut": true, "isSigner": false },
+        { "name": "user", "isMut": true, "isSigner": true }
+      ],
+      "args": []
+    },
+    {
+      "name": "processReferral",
+      "accounts": [
+        { "name": "referrerStats", "isMut": true, "isSigner": false },
+        { "name": "referrer", "isMut": false, "isSigner": false },
+        { "name": "user", "isMut": true, "isSigner": true }
+      ],
+      "args": []
+    }
+  ],
+  "accounts": [
+    {
+      "name": "UserAccount",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          { "name": "owner", "type": "publicKey" },
+          { "name": "points", "type": "u64" },
+          { "name": "totalReferred", "type": "u64" },
+          { "name": "xFollowed", "type": "bool" },
+          { "name": "tgJoined", "type": "bool" }
+        ]
+      }
+    }
+  ],
+  "errors": [
+    { "code": 6000, "name": "AlreadyClaimed", "msg": "You have already claimed this task reward." }
+  ],
+  "metadata": {
+    "address": "DzsNMUqVhpyj6rznbph4jjDKTshPaKdWVHYHDBETYgXE"
+  }
+}
