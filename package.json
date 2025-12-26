@@ -1,0 +1,22 @@
+{
+  "name": "grokmultiverse",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "next": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "@solana/web3.js": "latest",
+    "@project-serum/anchor": "latest",
+    "@solana/wallet-adapter-react": "latest",
+    "@solana/wallet-adapter-react-ui": "latest",
+    "@solana/wallet-adapter-wallets": "latest",
+    "framer-motion": "latest",
+    "lucide-react": "latest"
+  }
+}
